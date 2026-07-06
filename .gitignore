@@ -1,0 +1,14 @@
+# Compiled binaries / build output
+*.exe
+*.out
+*.o
+*.obj
+a.exe
+a.out
+
+# Generated audio output
+*.wav
+
+# OS junk
+Thumbs.db
+.DS_Store
