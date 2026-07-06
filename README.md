@@ -1,6 +1,6 @@
-# Learning Audio
+# Audio DSP From Scratch
 
-A day-by-day journey learning digital audio programming in C++.
+A day-by-day journey learning digital audio programming in C++ — writing WAV files, synthesizing waveforms, and exploring signals with no audio libraries.
 
 ## Contents
 
