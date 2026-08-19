@@ -8,6 +8,8 @@ A day-by-day journey learning digital audio programming in C++ — writing WAV f
 - **Day 2 – Generate Square and Sawtooth** — Synthesizing basic waveforms.
 - **Day 3 – Sweep** — Frequency sweeps across waveforms.
 - **Day 4 – Describe** — Notes on aliasing and spectrograms.
+- **Day 5 – Panning Audio** — Stereo output and amplitude panning.
+- **DFT** — A naive discrete Fourier transform, plus a Python script to plot the spectra.
 
 ## Building
 
