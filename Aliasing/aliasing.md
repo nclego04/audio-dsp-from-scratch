@@ -2,4 +2,8 @@ Sine sweep sounds normal. This is because sine is a single component, so it alwa
 Saw and square sweep, towards the higher end of the sweep, have distortions. These distortions occur because of aliasing. Saw and square waves are made of multiple harmonic frequencies that are multiples of the fundamental frequency. Once any harmonic exceeds the Nyquist frequency, it folds back into the audible band at sample_rate - f_harmonic, which is a non-harmonic frequency. If the harmonic carries a lot of energy because it is a lower multiple of the fundamental, then the dissonance becomes audible. 
 In the spectrograms, descending arcs can be seen crossing the rising harmonics. These are the folds reflecting back in. These arcs are descending because it is the result of the subtraction of f_s - f. As the harmonic increases, the alias decreases, hence the descending arcs. 
 The fix for this is either band-limiting the signal (generating the waveform without the harmonics higher than the Nyquist frequency) or oversampling (more harmonics fit without folding, the harmonics that do fold can be filtered out without affecting the reproduction of the signal).
-![sweep spectrogram](spectrograms.png)
+![sweep spectrogram](../Day%204%20-%20Describe/spectrograms.png)
+
+## Measurement
+
+I used the sawtooth sweep WAV file, sweeping from 20 Hz to 20 kHz. I picked a time of 4.8623 seconds to measure a fundamental frequency of 16537.5 Hz and its 2nd harmonic, 33075 Hz, which would be aliased to f_s - 2nd harmonic frequency, which is 11025 Hz. I predicted the aliased frequency to be 11025 Hz. I measured the aliased frequency to be 11025 Hz. These frequencies are equal. This aliasing occurs because of the sampling theorem, which states that the sampling frequency must be more than twice the highest frequency component to prevent aliasing. The 2nd harmonic frequency is 33075 Hz, which is more than half of the sampling frequency, 44100 Hz.
